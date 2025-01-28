@@ -18,3 +18,6 @@ This project showcases a recipe website I developed as a personal initiative, pr
 - **Notifications**: SignalR
 - **Authentication**: Azure B2C
 - **Database**: Entity Framework with Microsoft SQL Server
+
+## Demo
+I haven't hosted this anywhere, but i took some screenshots [you can see here](https://drive.google.com/file/d/1Myrs55sfT81ES0HkKfxi3H-OFuRKuKrG/view?usp=sharing)
