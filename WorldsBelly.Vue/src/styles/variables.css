@@ -1,0 +1,9 @@
+:root {
+  --primary: #130c1f;
+  --highlight: #62ba2e;
+  --text: #130c1f;
+  --accent: #0286CD;
+  --yellow: #f9c914;
+  --border-color: #e6eaea;
+  --page-height: calc(100vh - 60px);
+}

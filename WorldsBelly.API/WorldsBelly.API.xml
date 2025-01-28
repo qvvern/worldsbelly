@@ -1,0 +1,612 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WorldsBelly.API</name>
+    </assembly>
+    <members>
+        <member name="M:WorldsBelly.API.Controllers.AppsController.GetAppsAsync">
+             <summary>
+             Get App Configurations
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/Apps
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.CommentController.GetRecipeComments(System.Int32,System.String)">
+            <param name="recipeId">The recipe to get comments for</param>
+            <param name="orderBy">DateCreatedAsc, DateCreatedDesc</param>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.CommentController.CreateRecipeComment(System.Int32)">
+            <param name="id">DateCreatedAsc, DateCreatedDesc</param>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.CountriesController.GetCountries">
+             <summary>
+             Get Countries
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/countries
+            
+             </remarks>
+             <response code="200">Returns countries</response>
+             <response code="404">If the countries is not found</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.IngredientsController.GetIngredients(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+             <summary>
+             Get Ingredients
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/ingredients
+            
+             </remarks>
+             <response code="200">Returns ingredients</response>
+             <response code="404">If the ingredients is not found</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.IngredientsController.GetIngredientsById(System.Collections.Generic.List{System.Int32})">
+             <summary>
+             Get ingredients by id
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST api/ingredients/id
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.LanguagesController.GetLanguages">
+             <summary>
+             Get Languages
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/countries
+            
+             </remarks>
+             <response code="200">Returns countries</response>
+             <response code="404">If the countries is not found</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.MeasurementsController.GetMeasurements">
+             <summary>
+             Get Measurements
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/measurements
+            
+             </remarks>
+             <response code="200">Returns measurements</response>
+             <response code="404">If the measurements is not found</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.NotificationsController.GetNotifications(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+             <summary>
+             Get Notifications by signed in user
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/notifications
+            
+             </remarks>
+             <response code="200">Returns notifications</response>
+             <response code="404">If the countries is not found</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.NotificationsController.GetNotification(System.Int32)">
+             <summary>
+             Get Notification by signed in user
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/notifications/id
+            
+             </remarks>
+             <param name="id">id of recipe</param>
+             <response code="200">Returns notifications</response>
+             <response code="404">If the countries is not found</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.NotificationsController.DeleteNotification">
+             <summary>
+             Delete Notifications
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 DELETE api/notifications/
+            
+             </remarks>
+             <response code="204">No Content</response>
+             <response code="400">If ingredient request is invalid</response>
+             <response code="401">If the authentication token is not provided or is expired - Format: Bearer JWT</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.NotificationsController.ReadNotificationAsync(System.Int32)">
+             <summary>
+             Read Notification
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/notifications/
+            
+             </remarks>
+             <param name="id">id of recipe</param>
+             <response code="204">No Content</response>
+             <response code="400">If ingredient request is invalid</response>
+             <response code="401">If the authentication token is not provided or is expired - Format: Bearer JWT</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.NotificationsController.ReadNotificationsAsync">
+             <summary>
+             Read Notifications
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/notifications/
+            
+             </remarks>
+             <response code="204">No Content</response>
+             <response code="400">If ingredient request is invalid</response>
+             <response code="401">If the authentication token is not provided or is expired - Format: Bearer JWT</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.NutrientsController.GetNutrients">
+             <summary>
+             Get Nutrients
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/nutrients
+            
+             </remarks>
+             <response code="200">Returns nutrients</response>
+             <response code="404">If the nutrients is not found</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipeDraftsController.GetRecipeDraftsAsync">
+             <summary>
+             Get Recipe Drafts
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/RecipeDrafts
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipeDraftsController.GetRecipeDraftAsync(System.Guid)">
+             <summary>
+             Get Recipe Draft
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/RecipeDrafts/{translationId}
+            
+             </remarks>
+             <param name="id">id of recipe draft translation</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipeDraftsController.UpdateRecipeDraftAsync(System.Guid,WorldsBelly.API.Models.RecipeView)">
+             <summary>
+             Update Recipe Draft
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/RecipeDrafts/{translationId}
+            
+             </remarks>
+             <param name="id">id of recipe draft translation</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipeDraftsController.PublishRecipeDraftAsync(System.Guid,WorldsBelly.API.Models.RecipeView)">
+             <summary>
+             Publish Recipe Draft
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/RecipeDrafts/{translationId}
+            
+             </remarks>
+             <param name="id">id of recipe draft translation</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipeDraftsController.CreateRecipeDraftAsync(WorldsBelly.API.Models.CreateRecipeDraftView)">
+             <summary>
+             Create Recipe Draft
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST api/RecipeDrafts/create
+            
+             </remarks>
+             <response code="200">Returns OK if ingredient was created</response>
+             <response code="400">If ingredient request is invalid</response>
+             <response code="401">If the authentication token is not provided or is expired - Format: Bearer JWT</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipeDraftsController.DeleteRecipeDraftAsync(System.Guid)">
+             <summary>
+             Delete Recipe Draft
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 DELETE api/RecipeDrafts/{translationId}
+            
+             </remarks>
+             <param name="id">id of translation</param>
+             <response code="200">Returns OK if ingredient was created</response>
+             <response code="400">If ingredient request is invalid</response>
+             <response code="401">If the authentication token is not provided or is expired - Format: Bearer JWT</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.GetRecipesAsync(WorldsBelly.DataAccess.Models.RecipeFilterQuery)">
+             <summary>
+             Get recipes
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST api/recipes
+            
+             </remarks>
+             <param name="filter">Filter options</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.GetRecipeAsync(System.Guid)">
+             <summary>
+             Get Recipe
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/Recipe/{id}
+            
+             </remarks>
+             <param name="id">id of recipe</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.GetRecipeStepsAsync(System.Guid)">
+             <summary>
+             Get Recipe Steps
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/Recipe/steps/{id}
+            
+             </remarks>
+             <param name="id">id of recipe</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.GetRecipeBestServedAsync">
+             <summary>
+             Get BestServed
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/Recipes/BestServed
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.GetRecipeConsumerAsync">
+             <summary>
+             Get Consumer
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/Recipes/Consumer
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.GetRecipeAgeGroupAsync">
+             <summary>
+             Get AgeGroup
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/Recipes/AgeGroup
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.GetRecipeDifficultyAsync">
+             <summary>
+             Get Difficulty
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/Recipes/Difficulty
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.GetRecipeUserRatingAsync(System.Int32)">
+             <summary>
+             Get recipe user rating
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/Recipes/id/user/rating
+            
+             </remarks>
+             <param name="id">id of recipe</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.SubmitRecipeUserRatingAsync(WorldsBelly.API.Models.RecipeRatingView)">
+             <summary>
+             Submit recipe user rating
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POAT api/Recipes/user/rating
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.LikeRecipeAsync(System.Int32)">
+             <summary>
+             Like/Unlike recipe
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST api/Recipes/{id}/like
+            
+             </remarks>
+             <param name="id">id of recipe</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.RecipesController.GetLikeRecipeAsync(System.Int32)">
+             <summary>
+             Get Like/Unlike recipe
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/Recipes/{id}/like
+            
+             </remarks>
+             <param name="id">id of recipe</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.TagSelectablesController.GetTagSelectableChoiceOrders">
+             <summary>
+             Get TagSelectableChoiceOrders
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/tagSelectables/ChoiceOrders
+            
+             </remarks>
+             <response code="200">Returns tagSelectableChoiceOrders</response>
+             <response code="401">If the authentication token is not provided or is expired - Format: Bearer JWT</response>
+             <response code="404">If the tagSelectableChoiceOrders is not found</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.GetRecipesAsync(WorldsBelly.DataAccess.Models.RecipeRelatedToUserFilterQuery)">
+             <summary>
+             Get recipes related to user
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST api/user/recipes
+            
+             </remarks>
+             <param name="filter">Filter options</param>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.GetSignedInUserAsync">
+             <summary>
+             Get Signed In User
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/SignedInUser
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.GetOrCreateSignedInUserAsync">
+             <summary>
+             GetOrCreate Signed In User
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST api/SignedInUser
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.VerifyUsernameAsync(System.String)">
+             <summary>
+             Verify Username
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/User/username/{username}
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+             <param name="username">id of user</param>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.GetUserAsync(System.String)">
+             <summary>
+             Get User by username
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET api/user/{username}
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+             <param name="username">id of user</param>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.UpdateUserAsync(System.String)">
+             <summary>
+             Update Signed In Username
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/SignedInUser/{username}
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+             <param name="username">username of user</param>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.UpdateUserAsync(WorldsBelly.DataAccess.Entities.User)">
+             <summary>
+             Update Signed In User
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/SignedInUser
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.UpdateUserAsync(WorldsBelly.DataAccess.Entities.AzureAdB2CUser)">
+             <summary>
+             Update SignedInMsalUser
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/users/SignedInMsalUser
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.UpdateUserEmailSubmitAsync(WorldsBelly.API.Models.UserUpdateEmail)">
+             <summary>
+             Submit users new email for verification and update
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/users/email/submit
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.DeleteProfileSubmitAsync">
+             <summary>
+             Submit delete profile for verification and update
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/users/delete/submit
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+        </member>
+        <member name="M:WorldsBelly.API.Controllers.UsersController.DeleteUserAsync(System.String)">
+             <summary>
+             Delete SignedInUser
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 UPDATE api/users/delete/{code}
+            
+             </remarks>
+             <response code="200">Returns a string that represents that URLs source code</response>
+             <response code="400">If the url is invalid and the validation criteria are not met</response>
+             <response code="500">In case of errors occurring on the data layer or anywhere on the server's side</response>
+             <param name="verificationCode">id of user</param>
+        </member>
+    </members>
+</doc>
